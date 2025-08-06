@@ -33,7 +33,7 @@ async def run():
             await asyncio.sleep(5)
 
     except asyncio.CancelledError:
-        print("🛑 Monitoreo cancelado.")
+        print(" Monitoreo cancelado.")
     finally:
         snmp_dispatcher.close()
 
