@@ -14,3 +14,12 @@ OIDS = {
     "ifAdminStatus": '1.3.6.1.2.1.2.2.1.7.2',
     "ifOperStatus": '1.3.6.1.2.1.2.2.1.8.1'
 }
+
+# Configuración de MySQL
+MYSQL_CONFIG = {
+    "host":  os.getenv("DB_HOST"),
+    "user":  os.getenv("DB_USER"),
+    "password":  os.getenv("DB_PASS"),
+    "port": 3306,
+    "database": os.getenv("DB_NAME")
+}
