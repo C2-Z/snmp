@@ -25,10 +25,14 @@ async def snmp_monitor():
                 if error_indication:
                     print("❌", error_indication)
                 elif error_status:
-                    print(f"⚠️ Error {error_status.prettyPrint()} at index {error_index}")
+                    print(f" Error {error_status.prettyPrint()} at index {error_index}")
                 else:
+                    data = {}
                     for var_bind in var_binds:
-                        print(f"{var_bind[0]} = {var_bind[1]}")
+                        oid = str(var_bind[0])
+                        value = str(var_bind[1])
+                        data[oid] = value
+                    print(data)
             except Exception as e:
                 print(f"Error en la consulta SNMP: {e}")
 
