@@ -1,20 +1,13 @@
 # db_service.py
 import mysql.connector
 from mysql.connector import Error
-
-def extract_device_name(sys_descr):
-    """Extrae el nombre del dispositivo desde sysDescr (segunda palabra)."""
-    try:
-        parts = sys_descr.split()
-        return parts[1] if len(parts) > 1 else "Unknown"
-    except Exception as e:
-        print(f"Error al extraer nombre del dispositivo: {e}")
-        return "Unknown"
+from config import NUMERIC_COLUMNS
 
 class DatabaseService:
-    def __init__(self, config):
-        """Inicializa la conexión a MySQL."""
+    def __init__(self, config, oids):
+        """Inicializa la conexión a MySQL y almacena los OIDs."""
         self.config = config
+        self.oids = oids
         self.connection = None
         self.connect()
 
@@ -28,32 +21,30 @@ class DatabaseService:
             print(f"Error al conectar a MySQL: {e}")
 
     def insert_snmp_data(self, snmp_data):
-        """Inserta los datos SNMP en la tabla snmp_data."""
+        """Inserta los datos SNMP en la tabla snmp_data dinámicamente."""
         try:
             cursor = self.connection.cursor()
             
-            device_name = extract_device_name(snmp_data.get('1.3.6.1.2.1.1.1.0', ''))
+            # Usar todas las claves de OIDS como columnas
+            columns = list(self.oids.keys())
+            columns_str = ', '.join(columns)
+            placeholders = ', '.join(['%s'] * len(columns))
+            insert_query = f"INSERT INTO snmp_data ({columns_str}) VALUES ({placeholders})"
             
-            insert_query = """
-            INSERT INTO snmp_data (
-                device_name,
-                sysUpTime,
-                ifNumber,
-                ifAdminStatus_2,
-                ifOperStatus_1
-            ) VALUES (%s, %s, %s, %s, %s)
-            """
-            values = (
-                device_name,
-                int(snmp_data.get('1.3.6.1.2.1.1.3.0', 0)),
-                int(snmp_data.get('1.3.6.1.2.1.2.1.0', 0)),
-                int(snmp_data.get('1.3.6.1.2.1.2.2.1.7.2', 0)),
-                int(snmp_data.get('1.3.6.1.2.1.2.2.1.8.1', 0))
-            )
+            values = []
+            for col in columns:
+                oid = self.oids.get(col, '')
+                value = snmp_data.get(oid, '0' if col in NUMERIC_COLUMNS else '')
+                try:
+                    values.append(int(value) if col in NUMERIC_COLUMNS else value)
+                except ValueError as e:
+                    print(f"Error convirtiendo valor para {col} (OID {oid}): {value}. Usando valor por defecto.")
+                    values.append(0 if col in NUMERIC_COLUMNS else '')
+            values = tuple(values)
             
             cursor.execute(insert_query, values)
             self.connection.commit()
-            print("Datos insertados exitosamente.")
+            print("Datos insertados exitosamente:", values)
         except Error as e:
             print(f"Error al insertar datos: {e}")
         finally:

@@ -10,7 +10,7 @@ class SnmpService:
         self.target_ip = target_ip
         self.target_port = target_port
         self.oids = oids
-        self.db_service = DatabaseService(mysql_config)
+        self.db_service = DatabaseService(mysql_config, oids)  # Pasamos oids
 
     async def monitor(self):
         """Monitorea datos SNMP y los guarda en la base de datos cada 5 segundos."""
@@ -21,9 +21,7 @@ class SnmpService:
         try:
             while True:
                 try:
-                    # OIDs List
                     object_types = [ObjectType(ObjectIdentity(oid)) for oid in self.oids.values()]
-
                     error_indication, error_status, error_index, var_binds = await get_cmd(
                         snmp_dispatcher,
                         community_data,
@@ -41,8 +39,7 @@ class SnmpService:
                             oid = str(var_bind[0])
                             value = str(var_bind[1])
                             data[oid] = value
-                        print("Datos SNMP obtenidos:", data)
-                        # Insertar datos en la base de datos
+                        print("Datos SNMP obtenidos")
                         self.db_service.insert_snmp_data(data)
                 except Exception as e:
                     print(f"Error en la consulta SNMP: {e}")
