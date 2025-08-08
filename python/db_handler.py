@@ -20,19 +20,18 @@ class DatabaseService:
         except Error as e:
             print(f"Error al conectar a MySQL: {e}")
 
-    def insert_snmp_data(self, snmp_data):
+    def insert_snmp_data(self, device_ip, snmp_data):
         """Inserta los datos SNMP en la tabla snmp_data dinámicamente."""
         try:
             cursor = self.connection.cursor()
             
-            # Usar todas las claves de OIDS como columnas
-            columns = list(self.oids.keys())
+            columns = ['device_ip'] + list(self.oids.keys())
             columns_str = ', '.join(columns)
             placeholders = ', '.join(['%s'] * len(columns))
             insert_query = f"INSERT INTO snmp_data ({columns_str}) VALUES ({placeholders})"
             
-            values = []
-            for col in columns:
+            values = [device_ip]
+            for col in self.oids.keys():
                 oid = self.oids.get(col, '')
                 value = snmp_data.get(oid, '0' if col in NUMERIC_COLUMNS else '')
                 try:
@@ -44,9 +43,9 @@ class DatabaseService:
             
             cursor.execute(insert_query, values)
             self.connection.commit()
-            print("Datos insertados exitosamente:", values)
+            print(f"Datos insertados para {device_ip}")
         except Error as e:
-            print(f"Error al insertar datos: {e}")
+            print(f"Error al insertar datos para {device_ip}: {e}")
         finally:
             cursor.close()
 
