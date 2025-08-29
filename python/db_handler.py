@@ -1,11 +1,11 @@
-# db_service.py
+# db_handler.py
 import mysql.connector
 from mysql.connector import Error
-from config import NUMERIC_COLUMNS
+from config import STRING_COLUMNS
 
 class DatabaseService:
     def __init__(self, config, oids):
-        """Inicializa la conexión a MySQL y almacena los OIDs."""
+        """Inicializa la conexión a MySQL y almacena los OIDs base."""
         self.config = config
         self.oids = oids
         self.connection = None
@@ -20,8 +20,8 @@ class DatabaseService:
         except Error as e:
             print(f"Error al conectar a MySQL: {e}")
 
-    def insert_snmp_data(self, device_ip, snmp_data):
-        """Inserta los datos SNMP en la tabla snmp_data dinámicamente."""
+    def insert_snmp_data(self, device_ip, snmp_data, device_oids):
+        """Inserta los datos SNMP en la tabla snmp_data usando OIDs específicos del dispositivo."""
         try:
             cursor = self.connection.cursor()
             
@@ -32,18 +32,16 @@ class DatabaseService:
             
             values = [device_ip]
             for col in self.oids.keys():
-                oid = self.oids.get(col, '')
-                value = snmp_data.get(oid, '0' if col in NUMERIC_COLUMNS else '')
+                oid = device_oids.get(col, '')
+                value = snmp_data.get(oid, None)
                 try:
-                    values.append(int(value) if col in NUMERIC_COLUMNS else value)
-                except ValueError as e:
-                    print(f"Error convirtiendo valor para {col} (OID {oid}): {value}. Usando valor por defecto.")
-                    values.append(0 if col in NUMERIC_COLUMNS else '')
+                    values.append(value if col in STRING_COLUMNS else int(value) if value is not None else None)
+                except (ValueError, TypeError):
+                    values.append(None)
             values = tuple(values)
             
             cursor.execute(insert_query, values)
             self.connection.commit()
-            print(f"Datos insertados para {device_ip}")
         except Error as e:
             print(f"Error al insertar datos para {device_ip}: {e}")
         finally:
