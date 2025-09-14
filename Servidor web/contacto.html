@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Contacto - Oficina Corporativa</title>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        nav { background-color: #333; color: white; padding: 10px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        h1 { color: #333; }
+        form { margin: 20px 0; padding: 15px; background-color: white; border: 1px solid #ddd; }
+        label { display: block; margin: 10px 0 5px; }
+        input, textarea { width: 100%; padding: 8px; }
+        button { background-color: #4CAF50; color: white; padding: 10px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="inicio.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="imagen.html">Galería</a>
+        <a href="post1.html">Blog</a>
+    </nav>
+    <h1>Contacto Interno</h1>
+    <form action="/" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="tu.email@oficina.com" required>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu consulta (ej., problema con FTP)"></textarea>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
