@@ -9,23 +9,22 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import poplib
 
-SERVER_IP = "192.168.56.1" # Poner la IP del PC correspondiente
+SERVER_IP = "192.168.30.10"
 HTTP_PORT = 80
 FTP_PORT = 21
 MYSQL_PORT = 3306
 SMTP_PORT = 25
 POP3_PORT = 110
-FTP_USER = "usuario1" 
+FTP_USER = "usuario1"
 FTP_PASS = "pass123"
-MAIL_USER = "empleado1"  # Usuario de Mercury
-MAIL_PASS = "pass123"  # Contraseña de Mercury
+MAIL_USER = ["empleado1", "empleado2"]  # Lista de usuarios para alternar
+MAIL_PASS = "pass123"  # Contraseña común
 HTTP_URLS = [
     f"http://{SERVER_IP}:{HTTP_PORT}/",
     f"http://{SERVER_IP}:{HTTP_PORT}/dashboard/",
     f"http://{SERVER_IP}:{HTTP_PORT}/contacto.html",
     f"http://{SERVER_IP}:{HTTP_PORT}/imagen.html",
-    f"http://{SERVER_IP}:{HTTP_PORT}/post1.html",
-    f"http://{SERVER_IP}:{HTTP_PORT}/inicio.html"
+    f"http://{SERVER_IP}:{HTTP_PORT}/post1.html"
 ]
 FTP_FILES = ["archivo.txt", "imagen.jpg"]
 
@@ -160,31 +159,34 @@ def simulate_mail_session():
         for _ in range(num_actions):
             action_type = random.choice(["send", "receive"])  # 50/50 probabilidad
             if action_type == "send":
-                # Envío SMTP
+                # Envío SMTP con alternancia de remitente y destinatario
+                sender = random.choice(MAIL_USER)
+                receiver = MAIL_USER[1] if sender == MAIL_USER[0] else MAIL_USER[0]  # Alterna
                 server = smtplib.SMTP(SERVER_IP, SMTP_PORT)
                 server.ehlo()
                 msg = MIMEMultipart()
-                msg['From'] = f"empleado1@oficina.local"
-                msg['To'] = f"empleado2@oficina.local"
+                msg['From'] = f"{sender}@oficina.local"
+                msg['To'] = f"{receiver}@oficina.local"
                 msg['Subject'] = f"Reporte {random.choice(['diario', 'semanal', 'proyecto'])}"
                 body = f"Contenido del email: Actualización sobre {random.choice(['reunión', 'tarea'])} - {time.ctime()}"
                 msg.attach(MIMEText(body, 'plain'))
                 server.sendmail(msg['From'], msg['To'], msg.as_string())
                 server.quit()
-                print(f"Email enviado vía SMTP a las {time.ctime()}")
+                print(f"Email enviado de {sender} a {receiver} vía SMTP a las {time.ctime()}")
                 time.sleep(random.uniform(5, 12))  # Pausa de 5-12 segundos
             else:  # Receive POP3
                 # Recepción POP3
+                current_user = random.choice(MAIL_USER)  # Alterna entre empleado1 y empleado2
                 pop_server = poplib.POP3(SERVER_IP, POP3_PORT)
-                pop_server.user(MAIL_USER)
+                pop_server.user(current_user)
                 pop_server.pass_(MAIL_PASS)
                 num_messages = len(pop_server.list()[1])
                 if num_messages > 0:
                     # Obtiene el primer mensaje
                     response, msg_lines, octets = pop_server.retr(1)
-                    print(f"Email recibido vía POP3: {len(msg_lines)} líneas")
+                    print(f"Email recibido vía POP3 para {current_user}: {len(msg_lines)} líneas")
                 else:
-                    print("No hay emails en la bandeja")
+                    print(f"No hay emails en la bandeja de {current_user}")
                 pop_server.quit()
                 time.sleep(random.uniform(3, 8))  # Pausa de 3-8 segundos
     except Exception as e:
