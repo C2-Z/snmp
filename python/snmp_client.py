@@ -15,7 +15,7 @@ class SnmpService:
         self.interfaces = INTERFACES
 
     async def monitor(self):
-        """Monitorea datos SNMP para cada IP y los guarda en la base de datos cada 5 segundos."""
+        """Monitorea datos SNMP para cada IP y los guarda en la base de datos cada x segundos."""
         snmp_dispatcher = SnmpDispatcher()
         community_data = CommunityData(self.community)
 
@@ -69,7 +69,7 @@ class SnmpService:
                     except Exception as e:
                         print(f" Error en la consulta SNMP para {target_ip}: {e}")
 
-                await asyncio.sleep(5)
+                await asyncio.sleep(15) #Tiempo de espera entre consultas
 
         except asyncio.CancelledError:
             print("Monitoreo cancelado.")
