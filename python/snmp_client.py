@@ -89,7 +89,7 @@ class SnmpService:
                     except (ValueError, TypeError):
                         data[oid] = None
 
-        print(f"  Datos de interfaz {if_index} en {ip}: {data}")
+        #print(f"  Datos de interfaz {if_index} en {ip}: {data}")
         return data
 
     async def monitor(self):
