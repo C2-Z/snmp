@@ -1,11 +1,11 @@
-# main.py
+#main.py
 import asyncio
 from snmp_client import SnmpService
-from config import COMMUNITY, TARGET_IPS, TARGET_PORT, OIDS_BASE, MYSQL_CONFIG
+from config import *
 
 if __name__ == "__main__":
     try:
-        snmp_service = SnmpService(COMMUNITY, TARGET_IPS, TARGET_PORT, OIDS_BASE, MYSQL_CONFIG)
+        snmp_service = SnmpService(COMMUNITY, TARGET_IPS, TARGET_PORT, MYSQL_CONFIG)
         asyncio.run(snmp_service.monitor())
     except KeyboardInterrupt:
-        print("\n Finalizado por el usuario.")
+        print("\nFinalizado por el usuario.")

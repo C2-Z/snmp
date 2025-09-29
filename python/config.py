@@ -1,4 +1,4 @@
-# config.py
+#config.py
 import os
 from dotenv import load_dotenv
 import ast
@@ -10,18 +10,19 @@ TARGET_IPS = ast.literal_eval(os.getenv("TARGET_IPS"))
 INTERFACES = ast.literal_eval(os.getenv("INTERFACES"))
 TARGET_PORT = int(os.getenv("TARGET_PORT"))
 
-# OIDs para monitoreo
-OIDS_BASE = {
-    "sysName": "1.3.6.1.2.1.1.5.0",  # Nombre del dispositivo
-    # Datos de interfaz
-    "ifInOctets_1": "1.3.6.1.2.1.2.2.1.10",
-    "ifOutOctets_1": "1.3.6.1.2.1.2.2.1.16",
-    "ifOutDiscards_1": "1.3.6.1.2.1.2.2.1.19",
-    "ifInUcastPkts_1": "1.3.6.1.2.1.2.2.1.11",
-    "ifInDiscards_1": "1.3.6.1.2.1.2.2.1.13",
-    "ifOutUcastPkts_1": "1.3.6.1.2.1.2.2.1.17",
+# OIDs de interfaz (requieren índice de interfaz)
+INTERFACE_OIDS = {
+    "ifInOctets": "1.3.6.1.2.1.2.2.1.10",
+    "ifOutOctets": "1.3.6.1.2.1.2.2.1.16",
+    "ifOutDiscards": "1.3.6.1.2.1.2.2.1.19",
+    "ifInUcastPkts": "1.3.6.1.2.1.2.2.1.11",
+    "ifInDiscards": "1.3.6.1.2.1.2.2.1.13",
+    "ifOutUcastPkts": "1.3.6.1.2.1.2.2.1.17"
+}
 
-    # Datos de IP
+# OIDs escalares (no requieren índice de interfaz)
+SCALAR_OIDS = {
+    "sysName": "1.3.6.1.2.1.1.5.0",
     "ipInReceives": "1.3.6.1.2.1.4.3.0",
     "ipInDelivers": "1.3.6.1.2.1.4.9.0",
     "ipOutRequests": "1.3.6.1.2.1.4.10.0",
@@ -31,8 +32,6 @@ OIDS_BASE = {
     "ipOutNoRoutes": "1.3.6.1.2.1.4.12.0",
     "ipInAddrErrors": "1.3.6.1.2.1.4.5.0"
 }
-
-STRING_COLUMNS = ["sysName"]
 
 MYSQL_CONFIG = {
     "host": os.getenv("DB_HOST"),
