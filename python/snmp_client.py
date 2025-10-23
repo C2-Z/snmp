@@ -1,6 +1,6 @@
 #snmp_client.py
 import asyncio
-from pysnmp.hlapi.v1arch.asyncio import SnmpDispatcher, CommunityData, UdpTransportTarget, get_cmd, ObjectType, ObjectIdentity
+from pysnmp.hlapi.v1arch.asyncio import *
 from db_handler import DatabaseService
 from config import INTERFACES, INTERFACE_OIDS, SCALAR_OIDS
 
