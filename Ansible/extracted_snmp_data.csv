@@ -1,0 +1,5 @@
+id,timestamp,device_ip,sysName,ifInOctets,ifOutOctets,ifOutDiscards,ifInUcastPkts,ifInDiscards,ifOutUcastPkts,ipInReceives,ipInDelivers,ipOutRequests,ipOutDiscards,ipInDiscards,ipForwDatagrams,ipOutNoRoutes,ipInAddrErrors,label,if_name
+1789,2025-09-24 14:47:41,192.168.99.1,R1.cisco.local,155549501,32140367,0,2417267,0,542890,24488,23744,16189,0,0,525488,744,0,0,2
+1790,2025-09-24 14:47:41,192.168.99.2,S1.cisco.local,1682080,1229784,0,17680,0,13266,158,158,155,1,0,0,0,0,0,10001
+1791,2025-09-24 14:47:41,192.168.99.3,S2.cisco.local,33851724,421817,0,525247,0,3484,147,147,143,2,0,0,0,0,0,10001
+1792,2025-09-24 14:47:41,192.168.99.4,S3.cisco.local,119926928,33695858,0,1869564,0,523673,149,149,142,1,0,0,0,0,0,10001

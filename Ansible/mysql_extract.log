@@ -1,0 +1,64 @@
+2025-10-19 16:46:57,419 - INFO - Datos cargados desde snmp_data.csv
+2025-10-19 16:46:57,435 - INFO - Columnas usadas: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 17:03:13,450 - INFO - Datos cargados desde snmp_data.csv
+2025-10-19 17:03:13,464 - INFO - Columnas usadas: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 17:11:09,796 - INFO - Datos cargados desde snmp_data.csv
+2025-10-19 17:11:09,808 - INFO - Columnas usadas: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 18:30:40,348 - INFO - Datos cargados desde snmp_data.csv
+2025-10-19 18:30:40,364 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 18:30:40,365 - INFO - Distribución de clases: {0: 12710, 1: 5464}
+2025-10-19 18:30:40,413 - INFO - Modelo KNN entrenado con parámetros: n_neighbors=3, weights='distance', p=1
+2025-10-19 18:30:40,533 - INFO - Matriz de confusión (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-19 18:30:40,533 - INFO - Reporte de clasificación (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-19 18:30:40,533 - INFO - Accuracy (KNN): 0.9367
+2025-10-19 18:30:40,542 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-19 18:30:40,566 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-19 18:31:01,947 - INFO - Datos extraídos correctamente
+2025-10-19 18:31:01,963 - INFO - Datos extraídos y guardados en 'extracted_snmp_data.csv'
+2025-10-19 18:31:01,994 - INFO - Columnas usadas para predicción: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 18:31:01,998 - INFO - Predicciones generadas con el modelo KNN
+2025-10-19 18:31:02,024 - INFO - YAML generado en ansible_config_1760916662.yaml
+2025-10-19 18:31:02,026 - ERROR - Error al ejecutar Ansible: [WinError 2] El sistema no puede encontrar el archivo especificado
+2025-10-19 18:31:02,027 - INFO - Esperando 15 segundos para la siguiente extracción...
+2025-10-19 18:31:14,634 - INFO - Monitoreo detenido por el usuario.
+2025-10-19 18:31:14,635 - INFO - Monitoreo detenido por el usuario.
+2025-10-19 18:38:04,935 - INFO - Datos cargados desde snmp_data.csv
+2025-10-19 18:38:04,947 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 18:38:04,947 - INFO - Distribución de clases: {0: 12710, 1: 5464}
+2025-10-19 18:38:04,992 - INFO - Modelo KNN entrenado con parámetros: n_neighbors=3, weights='distance', p=1
+2025-10-19 18:38:05,107 - INFO - Matriz de confusión (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-19 18:38:05,107 - INFO - Reporte de clasificación (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-19 18:38:05,107 - INFO - Accuracy (KNN): 0.9367
+2025-10-19 18:38:05,118 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-19 18:38:05,135 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-19 18:38:26,283 - INFO - Datos extraídos correctamente
+2025-10-19 18:38:26,291 - INFO - Datos extraídos y guardados en 'extracted_snmp_data.csv'
+2025-10-19 18:38:26,320 - INFO - Columnas usadas para predicción: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 18:38:26,323 - INFO - Predicciones generadas con el modelo KNN
+2025-10-19 18:38:26,336 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-19 18:38:26,337 - INFO - Esperando 15 segundos para la siguiente extracción...
+2025-10-19 18:38:35,105 - INFO - Monitoreo detenido por el usuario.
+2025-10-19 18:38:35,105 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 20:21:23,350 - INFO - Datos extraÃ­dos correctamente

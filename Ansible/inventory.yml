@@ -1,0 +1,5 @@
+[routers]
+R1 ansible_host=192.168.99.1 ansible_user=admin ansible_password=cisco ansible_connection=network_cli ansible_network_os=ios ansible_python_interpreter=/mnt/c/Users/Samir\ David\ Mercado/PF/snmp/snmp_env/bin/python3 
+S1 ansible_host=192.168.99.2 ansible_user=admin ansible_password=cisco ansible_connection=network_cli ansible_network_os=ios ansible_python_interpreter=/mnt/c/Users/Samir\ David\ Mercado/PF/snmp/snmp_env/bin/python3
+S2 ansible_host=192.168.99.3 ansible_user=admin ansible_password=cisco ansible_connection=network_cli ansible_network_os=ios ansible_python_interpreter=/mnt/c/Users/Samir\ David\ Mercado/PF/snmp/snmp_env/bin/python3
+S3 ansible_host=192.168.99.4 ansible_user=admin ansible_password=cisco ansible_connection=network_cli ansible_network_os=ios ansible_python_interpreter=/mnt/c/Users/Samir\ David\ Mercado/PF/snmp/snmp_env/bin/python3

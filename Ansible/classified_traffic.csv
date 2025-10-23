@@ -1,0 +1,5 @@
+device_ip,if_name,sysName,timestamp,knn_prediction
+192.168.99.1,2,R1.cisco.local,2025-09-24 14:47:41,Normal
+192.168.99.2,10001,S1.cisco.local,2025-09-24 14:47:41,Normal
+192.168.99.3,10001,S2.cisco.local,2025-09-24 14:47:41,Normal
+192.168.99.4,10001,S3.cisco.local,2025-09-24 14:47:41,Normal

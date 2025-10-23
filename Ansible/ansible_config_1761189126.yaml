@@ -1,0 +1,31 @@
+- gather_facts: false
+  hosts: routers
+  tasks:
+  - ios_config:
+      lines:
+      - interface 2
+      - ip verify unicast source reachable-via rx
+      - rate-limit input 1000000 187500 375000 conform-action transmit exceed-action
+        drop
+    name: Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)
+  - ios_config:
+      lines:
+      - interface 10001
+      - ip verify unicast source reachable-via rx
+      - rate-limit input 1000000 187500 375000 conform-action transmit exceed-action
+        drop
+    name: Mitigar ataque en interface 10001 de S1.cisco.local (192.168.99.2)
+  - ios_config:
+      lines:
+      - interface 10001
+      - ip verify unicast source reachable-via rx
+      - rate-limit input 1000000 187500 375000 conform-action transmit exceed-action
+        drop
+    name: Mitigar ataque en interface 10001 de S2.cisco.local (192.168.99.3)
+  - ios_config:
+      lines:
+      - interface 10001
+      - ip verify unicast source reachable-via rx
+      - rate-limit input 1000000 187500 375000 conform-action transmit exceed-action
+        drop
+    name: Mitigar ataque en interface 10001 de S3.cisco.local (192.168.99.4)

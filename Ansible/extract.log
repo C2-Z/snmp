@@ -1,0 +1,1816 @@
+2025-10-19 18:49:13,561 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-19 18:49:13,576 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 18:49:13,577 - INFO - Distribuci髇 de clases: {0: 12710, 1: 5464}
+2025-10-19 18:49:13,629 - INFO - Modelo KNN entrenado con par醡etros: n_neighbors=3, weights='distance', p=1
+2025-10-19 18:49:13,734 - INFO - Matriz de confusi髇 (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-19 18:49:13,734 - INFO - Reporte de clasificaci髇 (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-19 18:49:13,734 - INFO - Accuracy (KNN): 0.9367
+2025-10-19 18:49:13,741 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-19 18:49:13,762 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-19 18:49:13,873 - INFO - Datos extra韉os correctamente desde snmp_data.csv
+2025-10-19 18:49:13,879 - INFO - Datos extra韉os y guardados en 'extracted_snmp_data.csv'
+2025-10-19 18:49:13,908 - INFO - Columnas usadas para predicci髇: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 18:49:13,911 - INFO - Predicciones generadas con el modelo KNN
+2025-10-19 18:49:13,927 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-19 18:49:13,927 - INFO - Esperando 15 segundos para la siguiente extracci髇...
+2025-10-19 18:49:19,530 - INFO - Monitoreo detenido por el usuario.
+2025-10-19 18:49:19,530 - INFO - Monitoreo detenido por el usuario.
+2025-10-19 19:09:22,133 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-19 19:09:22,147 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 19:09:22,148 - INFO - Distribuci髇 de clases: {0: 12710, 1: 5464}
+2025-10-19 19:09:22,194 - INFO - Modelo KNN entrenado con par醡etros: n_neighbors=3, weights='distance', p=1
+2025-10-19 19:09:22,312 - INFO - Matriz de confusi髇 (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-19 19:09:22,312 - INFO - Reporte de clasificaci髇 (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-19 19:09:22,313 - INFO - Accuracy (KNN): 0.9367
+2025-10-19 19:09:22,323 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-19 19:09:22,343 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-19 19:09:22,414 - INFO - Datos extra韉os correctamente desde snmp_data.csv
+2025-10-19 19:09:22,422 - INFO - Datos extra韉os y guardados en 'extracted_snmp_data.csv'
+2025-10-19 19:09:22,457 - INFO - Columnas usadas para predicci髇: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 19:09:22,460 - INFO - Predicciones generadas con el modelo KNN
+2025-10-19 19:09:22,481 - INFO - YAML generado en ansible_config_1760918962.yaml
+2025-10-19 19:09:22,484 - ERROR - Error al ejecutar Ansible: [WinError 2] El sistema no puede encontrar el archivo especificado
+2025-10-19 19:09:22,484 - INFO - Esperando 15 segundos para la siguiente extracci髇...
+2025-10-19 19:09:26,067 - INFO - Monitoreo detenido por el usuario.
+2025-10-19 19:09:26,067 - INFO - Monitoreo detenido por el usuario.
+2025-10-19 19:10:53,809 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-19 19:10:53,821 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 19:10:53,822 - INFO - Distribuci髇 de clases: {0: 12710, 1: 5464}
+2025-10-19 19:10:53,871 - INFO - Modelo KNN entrenado con par醡etros: n_neighbors=3, weights='distance', p=1
+2025-10-19 19:10:53,984 - INFO - Matriz de confusi髇 (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-19 19:10:53,984 - INFO - Reporte de clasificaci髇 (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-19 19:10:53,984 - INFO - Accuracy (KNN): 0.9367
+2025-10-19 19:10:53,993 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-19 19:10:54,016 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-19 19:10:54,078 - INFO - Datos extra韉os correctamente desde snmp_data.csv
+2025-10-19 19:10:54,087 - INFO - Datos extra韉os y guardados en 'extracted_snmp_data.csv'
+2025-10-19 19:10:54,119 - INFO - Columnas usadas para predicci髇: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 19:10:54,122 - INFO - Predicciones generadas con el modelo KNN
+2025-10-19 19:10:54,142 - INFO - YAML generado en ansible_config_1760919054.yaml
+2025-10-19 19:10:54,144 - ERROR - Error al ejecutar Ansible: [WinError 2] El sistema no puede encontrar el archivo especificado
+2025-10-19 19:10:54,144 - INFO - Esperando 15 segundos para la siguiente extracci髇...
+2025-10-19 19:11:09,200 - INFO - Datos extra韉os correctamente desde snmp_data.csv
+2025-10-19 19:11:09,205 - INFO - Datos extra韉os y guardados en 'extracted_snmp_data.csv'
+2025-10-19 19:11:09,232 - INFO - Columnas usadas para predicci髇: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 19:11:09,234 - INFO - Predicciones generadas con el modelo KNN
+2025-10-19 19:11:09,292 - INFO - YAML generado en ansible_config_1760919069.yaml
+2025-10-19 19:11:09,296 - ERROR - Error al ejecutar Ansible: [WinError 2] El sistema no puede encontrar el archivo especificado
+2025-10-19 19:11:09,320 - INFO - Esperando 15 segundos para la siguiente extracci髇...
+2025-10-19 19:11:24,394 - INFO - Datos extra韉os correctamente desde snmp_data.csv
+2025-10-19 19:11:24,399 - INFO - Datos extra韉os y guardados en 'extracted_snmp_data.csv'
+2025-10-19 19:11:24,427 - INFO - Columnas usadas para predicci髇: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 19:11:24,430 - INFO - Predicciones generadas con el modelo KNN
+2025-10-19 19:11:24,450 - INFO - YAML generado en ansible_config_1760919084.yaml
+2025-10-19 19:11:24,452 - ERROR - Error al ejecutar Ansible: [WinError 2] El sistema no puede encontrar el archivo especificado
+2025-10-19 19:11:24,453 - INFO - Esperando 15 segundos para la siguiente extracci髇...
+2025-10-19 19:11:39,514 - INFO - Datos extra韉os correctamente desde snmp_data.csv
+2025-10-19 19:11:39,519 - INFO - Datos extra韉os y guardados en 'extracted_snmp_data.csv'
+2025-10-19 19:11:39,542 - INFO - Columnas usadas para predicci髇: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 19:11:39,546 - INFO - Predicciones generadas con el modelo KNN
+2025-10-19 19:11:39,564 - INFO - YAML generado en ansible_config_1760919099.yaml
+2025-10-19 19:11:39,566 - ERROR - Error al ejecutar Ansible: [WinError 2] El sistema no puede encontrar el archivo especificado
+2025-10-19 19:11:39,566 - INFO - Esperando 15 segundos para la siguiente extracci髇...
+2025-10-19 19:11:54,623 - INFO - Datos extra韉os correctamente desde snmp_data.csv
+2025-10-19 19:11:54,629 - INFO - Datos extra韉os y guardados en 'extracted_snmp_data.csv'
+2025-10-19 19:11:54,657 - INFO - Columnas usadas para predicci髇: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 19:11:54,661 - INFO - Predicciones generadas con el modelo KNN
+2025-10-19 19:11:54,678 - INFO - YAML generado en ansible_config_1760919114.yaml
+2025-10-19 19:11:54,680 - ERROR - Error al ejecutar Ansible: [WinError 2] El sistema no puede encontrar el archivo especificado
+2025-10-19 19:11:54,680 - INFO - Esperando 15 segundos para la siguiente extracci髇...
+2025-10-19 19:12:01,842 - INFO - Monitoreo detenido por el usuario.
+2025-10-19 19:12:01,842 - INFO - Monitoreo detenido por el usuario.
+2025-10-19 19:23:14,823 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-19 19:23:14,853 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 19:23:14,856 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-19 19:23:14,897 - INFO - Modelo KNN entrenado con par谩metros: n_neighbors=3, weights='distance', p=1
+2025-10-19 19:23:15,008 - INFO - Matriz de confusi贸n (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-19 19:23:15,009 - INFO - Reporte de clasificaci贸n (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-19 19:23:15,009 - INFO - Accuracy (KNN): 0.9367
+2025-10-19 19:23:15,057 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-19 19:23:15,116 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-19 19:23:15,224 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-19 19:23:15,264 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-19 19:23:15,323 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-19 19:23:15,328 - INFO - Predicciones generadas con el modelo KNN
+2025-10-19 19:23:15,360 - INFO - YAML generado en ansible_config_1760919795.yaml
+2025-10-19 19:23:17,116 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+2025-10-19 19:23:17,117 - ERROR - Error en Ansible: [WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+[WARNING]: Could not match supplied host pattern, ignoring: routers
+
+2025-10-19 19:23:17,118 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-19 19:23:27,115 - INFO - Monitoreo detenido por el usuario.
+2025-10-19 19:23:27,116 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 05:43:15,860 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-20 05:43:15,901 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 05:43:15,908 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-20 05:43:15,967 - INFO - Modelo KNN entrenado con par谩metros: n_neighbors=3, weights='distance', p=1
+2025-10-20 05:43:16,119 - INFO - Matriz de confusi贸n (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-20 05:43:16,120 - INFO - Reporte de clasificaci贸n (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-20 05:43:16,121 - INFO - Accuracy (KNN): 0.9367
+2025-10-20 05:43:16,181 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-20 05:43:16,238 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-20 05:43:16,375 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 05:43:16,427 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 05:43:16,491 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 05:43:16,496 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 05:43:16,540 - INFO - YAML generado en ansible_config_1760956996.yaml
+2025-10-20 05:43:22,456 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [R1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [S2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [S3]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [S1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 05:43:22,458 - ERROR - Error en Ansible: [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-10-20 05:43:22,459 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 05:43:39,218 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 05:43:39,226 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 05:43:39,253 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 05:43:39,256 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 05:43:39,282 - INFO - YAML generado en ansible_config_1760957019.yaml
+2025-10-20 05:43:44,027 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [R1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [S1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [S2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [S3]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 05:43:44,029 - ERROR - Error en Ansible: [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-10-20 05:43:44,030 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 05:43:59,143 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 05:43:59,155 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 05:43:59,184 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 05:43:59,193 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 05:43:59,222 - INFO - YAML generado en ansible_config_1760957039.yaml
+2025-10-20 05:44:05,891 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [S1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [R1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [S2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [S3]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 05:44:05,892 - ERROR - Error en Ansible: [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-10-20 05:44:05,893 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 05:44:20,984 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 05:44:20,993 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 05:44:21,020 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 05:44:21,025 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 05:44:21,050 - INFO - YAML generado en ansible_config_1760957061.yaml
+2025-10-20 05:44:24,755 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 05:44:24,756 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 05:55:53,030 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-20 05:55:53,067 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 05:55:53,072 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-20 05:55:53,127 - INFO - Modelo KNN entrenado con par谩metros: n_neighbors=3, weights='distance', p=1
+2025-10-20 05:55:53,258 - INFO - Matriz de confusi贸n (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-20 05:55:53,259 - INFO - Reporte de clasificaci贸n (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-20 05:55:53,260 - INFO - Accuracy (KNN): 0.9367
+2025-10-20 05:55:53,311 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-20 05:55:53,374 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-20 05:55:53,487 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 05:55:53,518 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 05:55:53,571 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 05:55:53,575 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 05:55:53,611 - INFO - YAML generado en ansible_config_1760957753.yaml
+2025-10-20 05:55:59,439 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [S2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [S1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [S3]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+fatal: [R1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 05:55:59,440 - ERROR - Error en Ansible: [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-10-20 05:55:59,442 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 05:56:14,534 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 05:56:14,544 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 05:56:14,569 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 05:56:14,573 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 05:56:14,597 - INFO - YAML generado en ansible_config_1760957774.yaml
+2025-10-20 05:56:17,870 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 05:56:17,871 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 06:02:27,496 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-20 06:02:27,524 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 06:02:27,527 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-20 06:02:27,567 - INFO - Modelo KNN entrenado con par谩metros: n_neighbors=3, weights='distance', p=1
+2025-10-20 06:02:27,677 - INFO - Matriz de confusi贸n (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-20 06:02:27,678 - INFO - Reporte de clasificaci贸n (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-20 06:02:27,679 - INFO - Accuracy (KNN): 0.9367
+2025-10-20 06:02:27,721 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-20 06:02:27,777 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-20 06:02:27,881 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 06:02:27,904 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 06:02:27,947 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 06:02:27,950 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 06:02:27,979 - INFO - YAML generado en ansible_config_1760958147.yaml
+2025-10-20 06:02:30,875 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+fatal: [S1]: FAILED! => {"changed": false, "msg": "paramiko is not installed: No module named 'paramiko'"}
+fatal: [S2]: FAILED! => {"changed": false, "msg": "paramiko is not installed: No module named 'paramiko'"}
+fatal: [R1]: FAILED! => {"changed": false, "msg": "paramiko is not installed: No module named 'paramiko'"}
+fatal: [S3]: FAILED! => {"changed": false, "msg": "paramiko is not installed: No module named 'paramiko'"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 06:02:30,888 - ERROR - Error en Ansible: [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-10-20 06:02:30,892 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 06:02:36,016 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 06:02:36,016 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 07:36:10,264 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-20 07:36:10,297 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 07:36:10,300 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-20 07:36:10,344 - INFO - Modelo KNN entrenado con par谩metros: n_neighbors=3, weights='distance', p=1
+2025-10-20 07:36:10,463 - INFO - Matriz de confusi贸n (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-20 07:36:10,464 - INFO - Reporte de clasificaci贸n (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-20 07:36:10,464 - INFO - Accuracy (KNN): 0.9367
+2025-10-20 07:36:10,524 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-20 07:36:10,586 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-20 07:36:10,702 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 07:36:10,758 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 07:36:10,817 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 07:36:10,821 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 07:36:10,868 - INFO - YAML generado en ansible_config_1760963770.yaml
+2025-10-20 07:37:44,920 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760963770.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760963770.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760963770.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760963770.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 07:37:44,921 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 07:37:58,927 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 07:37:58,928 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 15:05:26,095 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-20 15:05:26,131 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 15:05:26,134 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-20 15:05:26,176 - INFO - Modelo KNN entrenado con par谩metros: n_neighbors=3, weights='distance', p=1
+2025-10-20 15:05:26,296 - INFO - Matriz de confusi贸n (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-20 15:05:26,297 - INFO - Reporte de clasificaci贸n (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-20 15:05:26,298 - INFO - Accuracy (KNN): 0.9367
+2025-10-20 15:05:26,360 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-20 15:05:26,421 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-20 15:05:26,541 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 15:05:26,596 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 15:05:26,653 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 15:05:26,657 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 15:05:26,705 - INFO - YAML generado en ansible_config_1760990726.yaml
+2025-10-20 15:05:51,807 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760990726.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760990726.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 15:05:51,814 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 15:06:01,258 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 15:06:01,259 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 16:14:01,358 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-20 16:14:01,390 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:14:01,393 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-20 16:14:01,436 - INFO - Modelo KNN entrenado con par谩metros: n_neighbors=3, weights='distance', p=1
+2025-10-20 16:14:01,551 - INFO - Matriz de confusi贸n (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-20 16:14:01,552 - INFO - Reporte de clasificaci贸n (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-20 16:14:01,553 - INFO - Accuracy (KNN): 0.9367
+2025-10-20 16:14:01,599 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-20 16:14:01,661 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-20 16:14:01,767 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:14:01,794 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:14:01,839 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:14:01,843 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:14:01,860 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-20 16:14:01,861 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:14:16,966 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:14:16,977 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:14:17,003 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:14:17,007 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:14:17,036 - INFO - YAML generado en ansible_config_1760994857.yaml
+2025-10-20 16:15:40,537 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 10004 de S1.cisco.local (192.168.99.2)] ******
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760994857.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760994857.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760994857.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760994857.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 16:15:40,539 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:15:48,132 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 16:15:48,133 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 16:22:35,493 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-20 16:22:35,523 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:22:35,527 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-20 16:22:35,567 - INFO - Modelo KNN entrenado con par谩metros: n_neighbors=3, weights='distance', p=1
+2025-10-20 16:22:35,722 - INFO - Matriz de confusi贸n (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-20 16:22:35,723 - INFO - Reporte de clasificaci贸n (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-20 16:22:35,724 - INFO - Accuracy (KNN): 0.9367
+2025-10-20 16:22:35,777 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-20 16:22:35,839 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-20 16:22:35,956 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:22:35,982 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:22:36,026 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:22:36,030 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:22:36,047 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-20 16:22:36,048 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:22:51,144 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:22:51,152 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:22:51,179 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:22:51,183 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:22:51,209 - INFO - YAML generado en ansible_config_1760995371.yaml
+2025-10-20 16:23:11,082 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 10004 de S1.cisco.local (192.168.99.2)] ******
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995371.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995371.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 16:23:11,083 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:23:19,624 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 16:23:19,624 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 16:26:21,450 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-20 16:26:21,477 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:26:21,479 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-20 16:26:21,517 - INFO - Modelo KNN entrenado con par谩metros: n_neighbors=3, weights='distance', p=1
+2025-10-20 16:26:21,635 - INFO - Matriz de confusi贸n (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-20 16:26:21,637 - INFO - Reporte de clasificaci贸n (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-20 16:26:21,637 - INFO - Accuracy (KNN): 0.9367
+2025-10-20 16:26:21,682 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-20 16:26:21,744 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-20 16:26:21,850 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:26:21,878 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:26:21,921 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:26:21,925 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:26:21,945 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-20 16:26:21,946 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:26:37,045 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:26:37,057 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:26:37,084 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:26:37,088 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:26:37,117 - INFO - YAML generado en ansible_config_1760995597.yaml
+2025-10-20 16:26:55,338 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 10004 de S1.cisco.local (192.168.99.2)] ******
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995597.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995597.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 16:26:55,340 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:27:10,476 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:27:10,487 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:27:10,521 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:27:10,531 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:27:10,567 - INFO - YAML generado en ansible_config_1760995630.yaml
+2025-10-20 16:27:37,719 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 10011 de S2.cisco.local (192.168.99.3)] ******
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995630.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995630.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 16:27:37,729 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:27:52,862 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:27:52,877 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:27:52,917 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:27:52,924 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:27:52,950 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-20 16:27:52,953 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:28:08,096 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:28:08,122 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:28:08,151 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:28:08,156 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:28:08,202 - INFO - YAML generado en ansible_config_1760995688.yaml
+2025-10-20 16:28:41,584 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 10001 de S3.cisco.local (192.168.99.4)] ******
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995688.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995688.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 16:28:41,598 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:28:56,718 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:28:56,733 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:28:56,781 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:28:56,793 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:28:56,842 - INFO - YAML generado en ansible_config_1760995736.yaml
+2025-10-20 16:29:31,178 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 10004 de S1.cisco.local (192.168.99.2)] ******
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995736.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995736.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 16:29:31,181 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:29:46,305 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:29:46,317 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:29:46,345 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:29:46,353 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:29:46,383 - INFO - YAML generado en ansible_config_1760995786.yaml
+2025-10-20 16:30:12,646 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 10002 de S2.cisco.local (192.168.99.3)] ******
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995786.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760995786.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 16:30:12,650 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:30:27,781 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:30:27,793 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:30:27,834 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:30:27,839 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:30:27,882 - INFO - YAML generado en ansible_config_1760995827.yaml
+2025-10-20 16:30:37,414 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 16:30:37,416 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 16:50:53,172 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-20 16:50:53,199 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:50:53,202 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-20 16:50:53,245 - INFO - Modelo KNN entrenado con par谩metros: n_neighbors=3, weights='distance', p=1
+2025-10-20 16:50:53,369 - INFO - Matriz de confusi贸n (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-20 16:50:53,370 - INFO - Reporte de clasificaci贸n (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-20 16:50:53,371 - INFO - Accuracy (KNN): 0.9367
+2025-10-20 16:50:53,416 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-20 16:50:53,478 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-20 16:50:53,587 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:50:53,612 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:50:53,659 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:50:53,663 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:50:53,694 - INFO - YAML generado en ansible_config_1760997053.yaml
+2025-10-20 16:51:12,815 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760997053.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760997053.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 16:51:12,842 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:51:27,932 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:51:27,942 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:51:27,971 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:51:27,977 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:51:27,995 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-20 16:51:27,996 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:51:43,087 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:51:43,096 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:51:43,120 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:51:43,124 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:51:43,143 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-20 16:51:43,143 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:51:58,232 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:51:58,241 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:51:58,266 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:51:58,270 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:51:58,298 - INFO - YAML generado en ansible_config_1760997118.yaml
+2025-10-20 16:52:20,775 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760997118.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760997118.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 16:52:20,777 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:52:35,883 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:52:35,896 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:52:35,925 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:52:35,931 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:52:35,957 - INFO - YAML generado en ansible_config_1760997155.yaml
+2025-10-20 16:52:56,149 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760997155.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760997155.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 16:52:56,152 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:53:11,241 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:53:11,251 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:53:11,279 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:53:11,283 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:53:11,308 - INFO - YAML generado en ansible_config_1760997191.yaml
+2025-10-20 16:53:30,178 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760997191.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]
+Origin: /mnt/c/Users/Samir David Mercado/PF/snmp/Ansible/ansible_config_1760997191.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: kex error : no match for method kex algos: server [diffie-hellman-group1-sha1], client [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256]"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-20 16:53:30,185 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-20 16:53:45,275 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-20 16:53:45,286 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-20 16:53:45,313 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-20 16:53:45,319 - INFO - Predicciones generadas con el modelo KNN
+2025-10-20 16:53:45,344 - INFO - YAML generado en ansible_config_1760997225.yaml
+2025-10-20 16:53:53,264 - INFO - Monitoreo detenido por el usuario.
+2025-10-20 16:53:53,265 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 19:51:16,260 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-22 19:51:16,289 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 19:51:16,292 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-22 19:51:16,329 - INFO - Modelo KNN entrenado con par谩metros: n_neighbors=3, weights='distance', p=1
+2025-10-22 19:51:16,475 - INFO - Matriz de confusi贸n (KNN):
+[[2473   69]
+ [ 161  932]]
+2025-10-22 19:51:16,476 - INFO - Reporte de clasificaci贸n (KNN):
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.97      0.96      2542
+   Malicioso       0.93      0.85      0.89      1093
+
+    accuracy                           0.94      3635
+   macro avg       0.93      0.91      0.92      3635
+weighted avg       0.94      0.94      0.94      3635
+
+2025-10-22 19:51:16,477 - INFO - Accuracy (KNN): 0.9367
+2025-10-22 19:51:16,538 - INFO - Modelo KNN entrenado y guardado en 'best_knn_model.pkl'
+2025-10-22 19:51:16,595 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-22 19:51:16,700 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 19:51:16,747 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 19:51:16,800 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 19:51:16,804 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 19:51:16,845 - INFO - YAML generado en ansible_config_1761180676.yaml
+2025-10-22 19:52:49,617 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761180676.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761180676.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761180676.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761180676.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-22 19:52:49,627 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 19:53:04,728 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 19:53:04,738 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 19:53:04,763 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 19:53:04,767 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 19:53:04,782 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 19:53:04,783 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 19:53:10,098 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 19:53:10,099 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 20:12:26,712 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-22 20:12:26,828 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-22 20:12:26,856 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 20:12:26,859 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-22 20:12:27,008 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 20:12:27,049 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 20:12:27,097 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 20:12:27,105 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 20:12:27,148 - INFO - YAML generado en ansible_config_1761181947.yaml
+2025-10-22 20:14:00,926 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761181947.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761181947.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761181947.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761181947.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-22 20:14:00,934 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 20:14:14,050 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 20:14:14,051 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 20:18:15,984 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-22 20:18:16,077 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-22 20:18:16,100 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 20:18:16,102 - INFO - Distribuci贸n de clases: {0: 12710, 1: 5464}
+2025-10-22 20:18:16,208 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 20:18:16,228 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 20:18:16,270 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 20:18:16,277 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 20:18:16,304 - INFO - YAML generado en ansible_config_1761182296.yaml
+2025-10-22 20:18:25,695 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 20:18:25,695 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 20:26:49,413 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-22 20:26:49,430 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-22 20:26:49,448 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 20:26:49,450 - INFO - Distribuci贸n de clases: {0: 4}
+2025-10-22 20:26:49,559 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 20:26:49,585 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 20:26:49,626 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 20:26:49,633 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 20:26:49,663 - INFO - YAML generado en ansible_config_1761182809.yaml
+2025-10-22 20:26:55,901 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 20:26:55,902 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 20:34:03,506 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-22 20:34:03,521 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-22 20:34:03,539 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 20:34:03,541 - INFO - Distribuci贸n de clases: {0: 4}
+2025-10-22 20:34:03,655 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 20:34:03,677 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 20:34:03,713 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 20:34:03,721 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 20:34:03,750 - INFO - YAML generado en ansible_config_1761183243.yaml
+2025-10-22 20:34:08,675 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 20:34:08,676 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 20:36:40,167 - INFO - Modelo KNN cargado desde 'best_knn_model.pkl'
+2025-10-22 20:36:40,182 - INFO - Datos etiquetados cargados desde snmp_data.csv (archivo local)
+2025-10-22 20:36:40,199 - INFO - Columnas usadas para entrenamiento: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 20:36:40,202 - INFO - Distribuci贸n de clases: {0: 4}
+2025-10-22 20:36:40,309 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 20:36:40,330 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 20:36:40,363 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 20:36:40,370 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 20:36:40,401 - INFO - YAML generado en ansible_config_1761183400.yaml
+2025-10-22 20:38:02,877 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761183400.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761183400.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761183400.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761183400.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-22 20:38:02,881 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 20:38:17,951 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 20:38:17,959 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 20:38:17,979 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 20:38:17,982 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 20:38:18,004 - INFO - YAML generado en ansible_config_1761183497.yaml
+2025-10-22 20:38:34,263 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 20:38:34,269 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 21:39:10,760 - INFO - Modelo KNN cargado desde 'model_knn.pkl'
+2025-10-22 21:39:10,918 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 21:39:10,963 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 21:39:11,008 - ERROR - Error al clasificar datos: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- label
+
+2025-10-22 21:39:11,009 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 21:39:21,251 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 21:39:21,252 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 21:43:46,174 - INFO - Modelo KNN cargado desde 'model_knn.pkl'
+2025-10-22 21:43:46,307 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 21:43:46,331 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 21:43:46,360 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 21:43:46,374 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 21:43:46,413 - INFO - YAML generado en ansible_config_1761187426.yaml
+2025-10-22 21:45:20,521 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 10001 de S2.cisco.local (192.168.99.3)] ******
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761187426.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761187426.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761187426.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761187426.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-22 21:45:20,522 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 21:45:35,594 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 21:45:35,601 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 21:45:35,618 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 21:45:35,624 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 21:45:35,647 - INFO - YAML generado en ansible_config_1761187535.yaml
+2025-10-22 21:47:04,468 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 10001 de S2.cisco.local (192.168.99.3)] ******
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761187535.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761187535.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761187535.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761187535.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-22 21:47:04,470 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 21:47:19,541 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 21:47:19,551 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 21:47:19,569 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 21:47:19,575 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 21:47:19,597 - INFO - YAML generado en ansible_config_1761187639.yaml
+2025-10-22 21:47:28,853 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 21:47:28,856 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 21:57:50,385 - INFO - Modelo KNN cargado desde 'model_knn.pkl'
+2025-10-22 21:57:50,499 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 21:57:50,529 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 21:57:50,566 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 21:57:50,579 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 21:57:50,605 - INFO - YAML generado en ansible_config_1761188270.yaml
+2025-10-22 21:59:18,268 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 10001 de S2.cisco.local (192.168.99.3)] ******
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761188270.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761188270.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761188270.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761188270.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-22 21:59:18,270 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 21:59:36,913 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 21:59:36,922 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 21:59:36,944 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 21:59:36,948 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 21:59:36,961 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 21:59:36,962 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 21:59:52,021 - INFO - Datos extra铆dos correctamente desde la base de datos MySQL
+2025-10-22 21:59:52,030 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 21:59:52,046 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 21:59:52,051 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 21:59:52,074 - INFO - YAML generado en ansible_config_1761188392.yaml
+2025-10-22 22:00:06,984 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 22:00:06,987 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 22:08:29,484 - INFO - Modelo KNN cargado desde 'model_knn.pkl'
+2025-10-22 22:08:29,628 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:08:29,656 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:08:29,698 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:08:29,712 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:08:29,729 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 22:08:29,730 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 22:08:37,771 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 22:08:37,772 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 22:09:26,901 - INFO - Modelo KNN cargado desde 'model_knn.pkl'
+2025-10-22 22:09:27,013 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:09:27,035 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:09:27,071 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:09:27,083 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:09:27,103 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 22:09:27,104 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 22:09:45,773 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:09:45,782 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:09:45,804 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:09:45,812 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:09:45,826 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 22:09:45,827 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 22:10:00,902 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:10:00,909 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:10:00,926 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:10:00,931 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:10:00,944 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 22:10:00,947 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 22:10:19,614 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:10:19,622 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:10:19,642 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:10:19,652 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:10:19,682 - INFO - YAML generado en ansible_config_1761189019.yaml
+2025-10-22 22:11:48,188 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761189019.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761189019.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761189019.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761189019.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-22 22:11:48,194 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 22:12:06,544 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:12:06,551 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:12:06,569 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:12:06,574 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:12:06,596 - INFO - YAML generado en ansible_config_1761189126.yaml
+2025-10-22 22:13:35,206 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761189126.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761189126.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761189126.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761189126.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-22 22:13:35,207 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 22:13:54,283 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:13:54,293 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:13:54,318 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:13:54,326 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:13:54,349 - INFO - YAML generado en ansible_config_1761189234.yaml
+2025-10-22 22:14:10,593 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 22:14:10,593 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 22:17:32,492 - INFO - Modelo KNN cargado desde 'model_knn.pkl'
+2025-10-22 22:17:32,605 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:17:32,625 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:17:32,660 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:17:32,671 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:17:32,686 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 22:17:32,687 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 22:17:47,763 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:17:47,771 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:17:47,790 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:17:47,796 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:17:47,811 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 22:17:47,812 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 22:18:06,476 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:18:06,483 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:18:06,500 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:18:06,507 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:18:06,521 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 22:18:06,521 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 22:18:21,602 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:18:21,610 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:18:21,631 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:18:21,635 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:18:21,649 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 22:18:21,651 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 22:18:40,309 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:18:40,317 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:18:40,332 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:18:40,338 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:18:40,355 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 22:18:40,356 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 22:18:55,435 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 22:18:55,443 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 22:18:55,459 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 22:18:55,464 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 22:18:55,488 - INFO - YAML generado en ansible_config_1761189535.yaml
+2025-10-22 22:18:59,957 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 22:18:59,957 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 23:45:37,561 - INFO - Modelo KNN cargado desde 'model_knn.pkl'
+2025-10-22 23:45:37,680 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 23:45:37,700 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 23:45:37,734 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 23:45:37,746 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 23:45:37,761 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 23:45:37,762 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 23:45:52,838 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 23:45:52,845 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 23:45:52,862 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 23:45:52,866 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 23:45:52,882 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 23:45:52,883 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 23:46:07,971 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 23:46:07,979 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 23:46:07,996 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 23:46:08,002 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 23:46:08,017 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 23:46:08,018 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 23:46:25,861 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 23:46:25,868 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 23:46:25,884 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 23:46:25,889 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 23:46:25,902 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 23:46:25,903 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 23:46:40,987 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 23:46:40,994 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 23:46:41,008 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 23:46:41,013 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 23:46:41,028 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 23:46:41,029 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 23:46:58,900 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 23:46:58,909 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 23:46:58,928 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 23:46:58,937 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 23:46:58,963 - INFO - YAML generado en ansible_config_1761194818.yaml
+2025-10-22 23:48:23,090 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761194818.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761194818.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761194818.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761194818.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-22 23:48:23,091 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 23:48:40,953 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 23:48:40,963 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 23:48:40,985 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 23:48:40,994 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 23:48:41,018 - INFO - YAML generado en ansible_config_1761194921.yaml
+2025-10-22 23:50:05,049 - INFO - Ansible ejecutado. Salida: 
+PLAY [routers] *****************************************************************
+
+TASK [Mitigar ataque en interface 2 de R1.cisco.local (192.168.99.1)] **********
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761194921.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [R1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.1"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761194921.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S1]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.2"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761194921.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S3]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.4"}
+[ERROR]: Task failed: Action failed: ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3
+Origin: /mnt/c/Users/Samir David Mercado/pf/snmp/Ansible/ansible_config_1761194921.yaml:4:5
+
+2   hosts: routers
+3   tasks:
+4   - ios_config:
+      ^ column 5
+
+fatal: [S2]: FAILED! => {"changed": false, "msg": "ssh connection failed: ssh connect failed: Timeout connecting to 192.168.99.3"}
+
+PLAY RECAP *********************************************************************
+R1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S1                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S2                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+S3                         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+2025-10-22 23:50:05,055 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 23:50:22,574 - INFO - Datos extra铆dos correctamente desde snmp_data.csv
+2025-10-22 23:50:22,589 - INFO - Datos extra铆dos y guardados en 'extracted_snmp_data.csv'
+2025-10-22 23:50:22,612 - INFO - Columnas usadas para predicci贸n: ['ifInOctets', 'ifOutOctets', 'ifOutDiscards', 'ifInUcastPkts', 'ifInDiscards', 'ifOutUcastPkts', 'ipInReceives', 'ipInDelivers', 'ipOutRequests', 'ipOutDiscards', 'ipInDiscards', 'ipForwDatagrams', 'ipOutNoRoutes', 'ipInAddrErrors']
+2025-10-22 23:50:22,625 - INFO - Predicciones generadas con el modelo KNN
+2025-10-22 23:50:22,648 - INFO - No se detectaron dispositivos atacados. No se genera YAML.
+2025-10-22 23:50:22,651 - INFO - Esperando 15 segundos para la siguiente extracci贸n...
+2025-10-22 23:50:34,141 - INFO - Monitoreo detenido por el usuario.
+2025-10-22 23:50:34,142 - INFO - Monitoreo detenido por el usuario.
