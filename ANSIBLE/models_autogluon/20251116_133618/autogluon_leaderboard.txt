@@ -1,0 +1,7 @@
+                    model  score_val   eval_metric  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
+0  NeuralNetFastAI_BAG_L1   0.419265  recall_macro       0.222386   81.374382                0.222386          81.374382            1       True          1
+1     WeightedEnsemble_L2   0.419265  recall_macro       0.225599   81.441034                0.003213           0.066652            2       True          2
+2     WeightedEnsemble_L4   0.419265  recall_macro       0.227925   81.606025                0.005539           0.231642            4       True          6
+3  NeuralNetFastAI_BAG_L2   0.410595  recall_macro       0.437542  159.030702                0.215156          77.656320            2       True          3
+4     WeightedEnsemble_L3   0.410595  recall_macro       0.440406  159.052390                0.002864           0.021688            3       True          4
+5  NeuralNetFastAI_BAG_L3   0.407463  recall_macro       0.601414  243.374809                0.163872          84.344107            3       True          5

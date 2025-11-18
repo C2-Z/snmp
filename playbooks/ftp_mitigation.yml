@@ -1,0 +1,55 @@
+---
+- name: Analizar log de FileZilla y bloquear IPs con menos de 6 intentos fallidos
+  hosts: WinFTP
+  gather_facts: false
+
+  tasks:
+    - name: Leer contenido del log de FileZilla
+      win_shell: Get-Content "C:\xampp\FileZillaFTP\Logs\FileZilla Server.log"
+      register: contenido_log
+
+    - name: Extraer IPs con error 530
+      set_fact:
+        ips_detectadas: "{{ contenido_log.stdout |
+                            regex_findall('\\((\\d+\\.\\d+\\.\\d+\\.\\d+)\\)>.*530 Login or password incorrect!') }}"
+
+    - name: Obtener lista única de IPs
+      set_fact:
+        ips_unicas: "{{ ips_detectadas | unique }}"
+
+    - name: Inicializar diccionario contador
+      set_fact:
+        conteo_ips: {}
+
+    - name: Contar intentos fallidos por cada IP
+      set_fact:
+        conteo_ips: "{{ conteo_ips | combine({ item: (ips_detectadas | select('equalto', item) | list | length) }) }}"
+      loop: "{{ ips_unicas }}"
+
+    - name: Filtrar IPs con menos de 6 intentos
+      set_fact:
+        ips_a_bloquear: "{{ conteo_ips | dict2items
+                            | selectattr('value', 'lt', 6)
+                            | map(attribute='key')
+                            | list }}"
+
+    # 🔥 Mantenemos el filtro de IPs IPv4 válidas
+    - name: Filtrar solo IPs IPv4 válidas
+      set_fact:
+        ips_validas: "{{ ips_a_bloquear | select('match', '^\\d+\\.\\d+\\.\\d+\\.\\d+$') | list }}"
+
+    - name: Mostrar IPs válidas a bloquear
+      debug:
+        var: ips_validas
+
+    # 🔥 Reemplazo de win_firewall_rule → PowerShell directo
+    - name: Bloquear IP usando comando PowerShell
+      win_shell: |
+        New-NetFirewallRule `
+          -DisplayName "Block-FTP-LowAttempts-{{ item }}" `
+          -Direction Inbound `
+          -Action Block `
+          -RemoteAddress {{ item }} `
+          -Protocol Any
+      loop: "{{ ips_validas }}"
+      when: item is match('^\\d+\\.\\d+\\.\\d+\\.\\d+$')

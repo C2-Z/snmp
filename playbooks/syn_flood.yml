@@ -1,0 +1,12 @@
+---
+- name: Apagar interfaz {{ interface }} en {{ device }}
+  hosts: {{ host }}
+  gather_facts: no
+  connection: network_cli
+
+  tasks:
+    - name: Apagar interfaz {{ interface }} en {{ device }}
+      ios_config:
+        parents: interface {{ interface }}
+        lines:
+          - shutdown
