@@ -1,55 +1,44 @@
 ---
-- name: Analizar log de FileZilla y bloquear IPs con menos de 6 intentos fallidos
+- name: Analizar log de FileZilla y bloquear IPs con más de 5 intentos fallidos del día más reciente
   hosts: WinFTP
   gather_facts: false
 
   tasks:
-    - name: Leer contenido del log de FileZilla
-      win_shell: Get-Content "C:\xampp\FileZillaFTP\Logs\FileZilla Server.log"
-      register: contenido_log
+    - name: Leer y filtrar líneas del log del día más reciente con error 530
+      win_shell: |
+        $logFile = "C:\xampp\FileZillaFTP\Logs\FileZilla Server.log"
 
-    - name: Extraer IPs con error 530
-      set_fact:
-        ips_detectadas: "{{ contenido_log.stdout |
-                            regex_findall('\\((\\d+\\.\\d+\\.\\d+\\.\\d+)\\)>.*530 Login or password incorrect!') }}"
+        # Obtener solo líneas con error 530
+        $lines = Get-Content $logFile | Select-String "530 Login or password incorrect!"
+        if ($lines.Count -eq 0) { exit 0 }
 
-    - name: Obtener lista única de IPs
-      set_fact:
-        ips_unicas: "{{ ips_detectadas | unique }}"
+        # Extraer solo fechas de esas líneas (dd/mm/yyyy)
+        $dates = $lines | ForEach-Object {
+            if ($_ -match '(\d{2}/\d{2}/\d{4})') { $matches[1] }
+        } | Sort-Object -Descending
 
-    - name: Inicializar diccionario contador
-      set_fact:
-        conteo_ips: {}
+        if ($dates.Count -eq 0) { exit 0 }
 
-    - name: Contar intentos fallidos por cada IP
-      set_fact:
-        conteo_ips: "{{ conteo_ips | combine({ item: (ips_detectadas | select('equalto', item) | list | length) }) }}"
-      loop: "{{ ips_unicas }}"
+        # Tomar la fecha más reciente
+        $latestDate = $dates[0]
 
-    - name: Filtrar IPs con menos de 6 intentos
-      set_fact:
-        ips_a_bloquear: "{{ conteo_ips | dict2items
-                            | selectattr('value', 'lt', 6)
-                            | map(attribute='key')
-                            | list }}"
-
-    # 🔥 Mantenemos el filtro de IPs IPv4 válidas
-    - name: Filtrar solo IPs IPv4 válidas
-      set_fact:
-        ips_validas: "{{ ips_a_bloquear | select('match', '^\\d+\\.\\d+\\.\\d+\\.\\d+$') | list }}"
+        # Filtrar líneas que coincidan con la fecha más reciente
+        $lines | Where-Object { $_ -match $latestDate } | ForEach-Object {
+            # Extraer la IP
+            if ($_ -match '\((\d{1,3}(\.\d{1,3}){3})\)') { $matches[1] }
+        } | Group-Object | Where-Object { $_.Count -gt 5 } | ForEach-Object { $_.Name }
+      register: ips_validas
 
     - name: Mostrar IPs válidas a bloquear
       debug:
-        var: ips_validas
+        var: ips_validas.stdout_lines
 
-    # 🔥 Reemplazo de win_firewall_rule → PowerShell directo
     - name: Bloquear IP usando comando PowerShell
       win_shell: |
         New-NetFirewallRule `
-          -DisplayName "Block-FTP-LowAttempts-{{ item }}" `
+          -DisplayName "Block-FTP-HighAttempts-{{ item }}" `
           -Direction Inbound `
           -Action Block `
           -RemoteAddress {{ item }} `
           -Protocol Any
-      loop: "{{ ips_validas }}"
-      when: item is match('^\\d+\\.\\d+\\.\\d+\\.\\d+$')
+      loop: "{{ ips_validas.stdout_lines }}"

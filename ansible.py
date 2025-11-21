@@ -46,8 +46,47 @@ classify_logger.setLevel(logging.INFO)
 # ====================== ARCHIVOS DE ESTADO ===========================
 STATE_FILE = 'mitigation_state.json'
 COUNTERS_FILE = 'interface_counters.json'
+
+GLOBAL_COOLDOWN_MINUTES = 2  # cambia aquí el tiempo de cooldown global
+GLOBAL_COOLDOWN_KEY = "global_mitigation"
+
 ROLLBACK_AFTER_MINUTES = 5
 COUNTER_MAX = 2**32  # cambia a 2**64 si usas contadores SNMP de 64 bits
+
+
+def global_on_cooldown(mitigation_state, cooldown_minutes=GLOBAL_COOLDOWN_MINUTES):
+    """
+    Retorna (on_cooldown: bool, remaining_timedelta_or_None)
+    Comprueba si existe una entrada global en mitigation_state y si todavía está
+    dentro del periodo de cooldown.
+    """
+    gm = mitigation_state.get(GLOBAL_COOLDOWN_KEY)
+    if not gm:
+        return False, None
+    last = gm.get("last_mitigated")
+    if not last:
+        return False, None
+    try:
+        last_dt = datetime.fromisoformat(last)
+    except Exception:
+        # formato inesperado -> no consideramos en cooldown
+        return False, None
+    elapsed = datetime.now() - last_dt
+    cd = timedelta(minutes=cooldown_minutes)
+    if elapsed < cd:
+        return True, (cd - elapsed)
+    return False, None
+
+def set_global_mitigation(mitigation_state, cooldown_minutes=GLOBAL_COOLDOWN_MINUTES):
+    """
+    Actualiza mitigation_state con la marca de tiempo actual para activar el cooldown.
+    """
+    mitigation_state[GLOBAL_COOLDOWN_KEY] = {
+        "last_mitigated": datetime.now().isoformat(),
+        "cooldown_minutes": cooldown_minutes
+    }
+
+
 # ====================== EJECUTAR PLAYBOOK ============================
 def execute_playbook(yaml_path, mitigation_state, is_rollback=False):
     try:
@@ -90,6 +129,7 @@ def execute_playbook(yaml_path, mitigation_state, is_rollback=False):
         classify_logger.info(f"Resultado en {host}: {status}")
         save_mitigation_state(mitigation_state)
 
+        return {"status": status}    
     except Exception as e:
         classify_logger.error(f"Error ejecutando {yaml_path}: {str(e)}")
 
@@ -251,7 +291,7 @@ def extraer_bloque_db(last_timestamp):
         # Query para tomar solo filas mayores que last_timestamp
         query = f"""
         SELECT *
-        FROM snmp_data_multi
+        FROM snmp_data
         WHERE timestamp > '{last_ts_str}'
         ORDER BY timestamp ASC
         """
@@ -259,7 +299,7 @@ def extraer_bloque_db(last_timestamp):
         df_nuevos = pd.read_sql(query, engine)
 
         if df_nuevos.empty:
-            return None, last_timestamp
+            return None, 
 
         # Convertimos timestamp a datetime
         df_nuevos['timestamp'] = pd.to_datetime(df_nuevos['timestamp'])
@@ -313,19 +353,11 @@ def main():
     counters_state = {}
     if os.path.exists('interface_counters.json'):
         os.remove('interface_counters.json')
+   
     device_order = ['R1.cisco.local', 'S1.cisco.local', 'S2.cisco.local', 'S3.cisco.local']
-    last_timestamp = '2025-11-14 15:43:00'
-    
-    # model_path = 'model_knn_multi.pkl'
-    # if not os.path.exists(model_path):
-    #     print(f"Error: El archivo {model_path} no existe en la carpeta actual.")
-    #     classify_logger.error(f"El archivo {model_path} no existe")
-    #     exit(1)
-    
-    # knn_model = joblib.load(model_path)
-    # print("Modelo KNN cargado desde 'model_knn_multi.pkl'")
+    last_timestamp = '2025-11-19 17:33:27'
 
-    model_path = "ANSIBLE/models_autogluon/20251116_195305_ROUTER" 
+    model_path = "modelo/models_autogluon/20251116_195305_ROUTER" 
 
     if not os.path.exists(model_path):
         print(f"Error: La carpeta del modelo {model_path} no existe.")
@@ -341,32 +373,48 @@ def main():
     mitigation_state = load_mitigation_state()
     counters_state = load_counters_state()
 
+        # === Reiniciar todas las mitigaciones individuales al iniciar el programa ===
+    for key in list(mitigation_state.keys()):
+        if key != "global_mitigation":  # no tocamos el cooldown global si lo usamos
+            mitigation_state[key]['status'] = 'unknown'
+    save_mitigation_state(mitigation_state)
+
+    # === Reiniciar cooldown global por nueva ejecución ===
+    if "global_mitigation" in mitigation_state:
+        del mitigation_state["global_mitigation"]
+        save_mitigation_state(mitigation_state)
+
+    # ==========================================================
+    #   LIMPIAR BLOQUE GLOBAL DE MITIGACIÓN SI EL COOLDOWN YA EXPIRÓ
+    # ==========================================================
+    # on_cd, remaining = global_on_cooldown(mitigation_state)
+    # if not on_cd:
+    #     if "global_mitigation" in mitigation_state:
+    #         print("Cooldown global expirado → limpiando estado global...")
+    #         del mitigation_state["global_mitigation"]
+    #         save_mitigation_state(mitigation_state)
+
     while True:
 # extraer datos
         data, last_timestamp = extraer_bloque_db(last_timestamp)
         if data is not None:
+            
             print("=== Datos extraídos ===")
             print(data[['timestamp', 'device_ip', 'sysName', 'if_name', 'label']].to_string())
-       # muestra las primeras 5 filas
-            #print(data.columns.tolist())  # muestra los nombres de las columnas
-            #print(data.shape)         # muestra (filas, columnas)
         else:
             print("No se extrajo ningún dato")
         if data is not None and not data.empty:
+            data = data.copy()
             data['if_name'] = data['if_name'].fillna(0).astype(int)
             data['sysName'] = pd.Categorical(data['sysName'], categories=device_order, ordered=True)
             data = data.sort_values('sysName')
 
             # === actualizar deltas para toda la red ===
             delta_data = update_counters_all(data, counters_state)
-
+            delta_data = delta_data[delta_data['sysName'] == 'R1.cisco.local']
             # elegir columnas para el modelo
             feature_columns = [col for col in delta_data.columns if col.startswith('delta_')]
             X = delta_data[feature_columns].copy()
-
-            # DEBUG
-            # print("\n=== Datos que se pasan al modelo KNN ===")
-            # print(X.to_string())
 
             # === prediccion modelo ===
             print("\n=== Realizando predicción... ===")
@@ -380,48 +428,90 @@ def main():
 
             
             if result is not None:
-
+                # === detección ataque TCP SYN ===
                 ataque_tcp_syn = result[result['prediction'] == 1]
 
                 if not ataque_tcp_syn.empty:
+
                     print("⚠️ Ataque detectado: TCP SYN FLOOD")
 
-                    # mitigación SOLO revisa deltas de S1 y S2 (siempre)
-                    switches_objetivo = result[result['sysName'].isin(['S1.cisco.local', 'S2.cisco.local'])].copy()
+                    # === 0) REVISAR COOL DOWN GLOBAL ===
+                    on_cd, remaining = global_on_cooldown(mitigation_state)
+                    if on_cd:
+                        print(f"Cooldown global activo. No se aplicará mitigación. Tiempo restante: {remaining}")
+                        continue
+
+                    # === mitigación SOLO revisa deltas de S1 y S2 ===
+                    switches_objetivo = data[data['sysName'].isin(['S1.cisco.local', 'S2.cisco.local'])].copy()
 
                     if switches_objetivo.empty:
                         print("⚠️ No hay datos de S1 o S2 disponibles. No se puede mitigar.")
+                        continue
+
+                    # === obtener deltas previos ===
+                    deltas = []
+                    for _, row in switches_objetivo.iterrows():
+                        key = f"{row['sysName'].split('.')[0]}_{row['if_name']}"
+                        delta = counters_state.get(key, {}).get("delta")
+                        if delta is not None:
+                            deltas.append((row['sysName'], INTERFACE_MAP.get(row['if_name'], row['if_name']), delta))
+
+                    if not deltas:
+                        print("ℹ️ Sin deltas previos aún en S1/S2.")
+                        continue
+
+                    # === encontrar interfaz con mayor delta ===
+                    device, interface, max_delta = max(deltas, key=lambda x: x[2])
+                    print(f"➡️ Mayor delta detectado en {device}, interfaz {interface} (Δ={max_delta}).")
+
+                    # === evitar duplicar mitigaciones en la misma interfaz ===
+                    mitigation_key = f"{device}_{interface}"
+                    if mitigation_key in mitigation_state and mitigation_state[mitigation_key].get("status") == "applied":
+                        print(f"⛔ Mitigación ya aplicada para {mitigation_key}.")
+                        continue
+
+                    # === crear playbook ===
+                    safe_interface = str(interface).replace("/", "_")
+                    yaml_path = f'temp_play_{device}_{safe_interface}_{int(time.time())}_shutdown.yaml'
+
+                    context = {
+                        "device": device,
+                        "interface": interface,
+                        "host": device.split('.')[0]
+                    }
+
+                    yaml_content = render_yaml_template("syn_flood.yml", context)
+
+                    with open(yaml_path, 'w', encoding='utf-8') as f:
+                        f.write(yaml_content)
+
+                    print(f"✅ Playbook generado para apagar puerto {interface} en {device}")
+
+                    # === ejecutar playbook ===
+                    result_status = execute_playbook(yaml_path, mitigation_state)
+
+                    # === traducir respuesta ===
+                    if isinstance(result_status, str):
+                        status = result_status
+                    elif isinstance(result_status, dict):
+                        status = result_status.get("status", "unknown")
                     else:
-                        deltas = []
-                        for _, row in switches_objetivo.iterrows():
-                            key = f"{row['sysName'].split('.')[0]}_{row['if_name']}"
-                            delta = counters_state.get(key, {}).get("delta")
-                            if delta is not None:
-                                deltas.append((row['sysName'], INTERFACE_MAP.get(row['if_name'], row['if_name']), delta))
+                        status = "unknown"
 
-                        if not deltas:
-                            print("ℹ️ Sin deltas previos aún en S1/S2.")
-                        else:
-                            device, interface, max_delta = max(deltas, key=lambda x: x[2])
-                            print(f"➡️ Mayor delta detectado en {device}, interfaz {interface} (Δ={max_delta}).")
+                    # === registrar mitigación individual ===
+                    mitigation_state[mitigation_key] = {
+                        "interface": str(interface),
+                        "last_mitigated": datetime.now().isoformat(),
+                        "yaml_path": yaml_path,
+                        "status": status
+                    }
 
-                            safe_interface = str(interface).replace("/", "_")
-                            yaml_path = f'temp_play_{device}_{safe_interface}_{int(time.time())}_shutdown.yaml'
+                    # === activar cooldown global si fue aplicada ===
+                    if status == "applied":
+                        set_global_mitigation(mitigation_state)
+                        print(f"🔒 Mitigación aplicada. Cooldown global activado por {GLOBAL_COOLDOWN_MINUTES} minutos.")
 
-                            context = {
-                                "device": device,
-                                "interface": interface,
-                                "host": device.split('.')[0]
-                            }
-
-                            yaml_content = render_yaml_template("syn_flood.yml", context)
-
-                            with open(yaml_path, 'w', encoding='utf-8') as f:
-                                f.write(yaml_content)
-
-                            print(f"✅ Playbook generado para apagar puerto {interface} en {device}")
-                            execute_playbook(yaml_path, mitigation_state)
-
+                    save_mitigation_state(mitigation_state)
                 ataque_ftp = result[result['prediction'] == 2]
 
                 if not ataque_ftp.empty:
@@ -432,54 +522,10 @@ def main():
 
                         print("➡️ Ejecutando playbook de mitigación FTP...")
                         execute_playbook(playbook_path, mitigation_state)
-
-#                     # mitigación SOLO revisa deltas de salida para S1/S2
-#                     switches_objetivo = result[result['sysName'].isin(['S1.cisco.local', 'S2.cisco.local'])].copy()
-
-#                     if switches_objetivo.empty:
-#                         print("⚠️ No hay datos de S1 o S2 disponibles. No se puede mitigar.")
-
-#                     else:
-#                         deltas_out = []
-#                         for _, row in switches_objetivo.iterrows():
-#                             key = f"{row['sysName'].split('.')[0]}_{row['if_name']}"
-#                             delta_out = counters_state.get(key, {}).get("delta_out")
-#                             if delta_out is not None:
-#                                 iface = INTERFACE_MAP.get(row['if_name'], row['if_name'])
-#                                 deltas_out.append((row['sysName'], iface, delta_out))
-
-#                         if not deltas_out:
-#                             print("ℹ️ Primera lectura: no hay datos previos para calcular deltas de salida.")
-
-#                         else:
-#                             device, interface, max_delta_out = max(deltas_out, key=lambda x: x[2])
-#                             print(f"➡️ Mayor delta de ifOutOctets en {device}, interfaz {interface} (Δ={max_delta_out}).")
-
-#                             safe_interface = str(interface).replace("/", "_")
-#                             yaml_path = f'temp_play_{device}_{safe_interface}_{int(time.time())}_shutdown.yaml'
-
-#                             yaml_content = f"""---
-# - name: Apagar interfaz {interface} en {device}
-#   hosts: {device.split('.')[0]}
-#   gather_facts: no
-#   connection: network_cli
-
-#   tasks:
-#     - name: Apagar interfaz {interface} en {device}
-#       ios_config:
-#         parents: interface {interface}
-#         lines:
-#           - shutdown
-# """
-#                             with open(yaml_path, 'w', encoding='utf-8') as f:
-#                                 f.write(yaml_content)
-
-#                             print(f"✅ Playbook generado para apagar puerto {interface} en {device}")
-#                             execute_playbook(yaml_path, mitigation_state)
                 else:
                     pass
         print("Esperando 15 segundos para la siguiente extracción...")
-        time.sleep(15)
+        time.sleep(10)
 
 if __name__ == "__main__":
     try:
