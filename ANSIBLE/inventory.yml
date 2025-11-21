@@ -1,0 +1,46 @@
+all:
+  hosts:
+
+    R1:
+      ansible_host: 192.168.99.1
+      ansible_user: admin
+      ansible_password: cisco
+      ansible_connection: network_cli
+      ansible_network_os: cisco.ios.ios
+      ansible_ssh_common_args: "-oKexAlgorithms=+diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedKeyTypes=+ssh-rsa -oStrictHostKeyChecking=no"
+
+    S1:
+      ansible_host: 192.168.99.2
+      ansible_user: admin
+      ansible_password: cisco
+      ansible_connection: network_cli
+      ansible_network_os: cisco.ios.ios
+      ansible_ssh_common_args: "-oKexAlgorithms=+diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedKeyTypes=+ssh-rsa -oStrictHostKeyChecking=no"
+
+    S2:
+      ansible_host: 192.168.99.3
+      ansible_user: admin
+      ansible_password: cisco
+      ansible_connection: network_cli
+      ansible_network_os: cisco.ios.ios
+      ansible_ssh_common_args: "-oKexAlgorithms=+diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedKeyTypes=+ssh-rsa -oStrictHostKeyChecking=no"
+
+    S3:
+      ansible_host: 192.168.99.4
+      ansible_user: admin
+      ansible_password: cisco
+      ansible_connection: network_cli
+      ansible_network_os: cisco.ios.ios
+      ansible_ssh_common_args: "-oKexAlgorithms=+diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedKeyTypes=+ssh-rsa -oStrictHostKeyChecking=no"
+
+    # 🟦 Host Windows FTP
+    WinFTP:
+      ansible_host: 192.168.30.10
+      ansible_user: Telematica
+      ansible_password: cisco
+      ansible_connection: winrm
+      ansible_winrm_transport: basic
+      ansible_winrm_scheme: http
+      ansible_port: 5985
+      ansible_winrm_server_cert_validation: ignore
+      ansible_winrm_shell_type: powershell
